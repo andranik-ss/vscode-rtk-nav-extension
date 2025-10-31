@@ -1,0 +1,60 @@
+{
+  "name": "rtk-query-navigator",
+  "displayName": "RTK Query Navigator",
+  "description": "Navigate from RTK Query hooks to their endpoint definitions",
+  "version": "0.0.2",
+  "publisher": "reco-dev",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rtk-query-navigator.goToEndpoint",
+        "title": "RTK: Go to Endpoint Definition"
+      },
+      {
+        "command": "rtk-query-navigator.findApiFiles",
+        "title": "RTK: Find API Files (Diagnostic)"
+      }
+    ],
+    "configuration": {
+      "title": "RTK Query Navigator",
+      "properties": {
+        "rtkQueryNavigator.searchPatterns": {
+          "type": "array",
+          "default": [
+            "**/features/**/api/*.{ts,tsx}",
+            "**/api/**/*.{ts,tsx}",
+            "**/services/**/*.{ts,tsx}",
+            "**/*api*.{ts,tsx}"
+          ],
+          "description": "Glob patterns to search for RTK Query API files. More specific patterns will be faster.",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "@vscode/vsce": "^2.19.0",
+    "typescript": "^5.0.0"
+  }
+}
+
