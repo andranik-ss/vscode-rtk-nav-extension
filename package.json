@@ -4,6 +4,11 @@
   "description": "Navigate from RTK Query hooks to their endpoint definitions",
   "version": "0.0.2",
   "publisher": "reco-dev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andranik-ss/vscode-rtk-nav-extension.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },

@@ -193,6 +193,10 @@ To customize:
 - File locations: Change `features/**/api/` pattern in `searchInWorkspace()`
 - Hook patterns: Adjust `hookNameToEndpointName()` function
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Release Notes
 
 ### 0.0.1
