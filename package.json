@@ -4,6 +4,7 @@
   "description": "Navigate from RTK Query hooks to their endpoint definitions",
   "version": "0.0.2",
   "publisher": "reco-dev",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.80.0"
   },
